@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      ಮುಖಪುಟ
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <img src="/assets/yakshadhwani.jpg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>ಯಕ್ಷಗಾನದ ಧ್ವನಿಮುದ್ರಣಗಳ ಸಂಗ್ರಹಾಲಯ</ion-card-subtitle>
+        <ion-card-title>ಯಕ್ಷಧ್ವನಿ</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+        ಯಕ್ಷಗಾನದ ಧ್ವನಿಮುದ್ರಣಗಳ ಪ್ರಸಾರಗಳನ್ನು ಇಲ್ಲಿಂದ ಪಡೆದುಕೊಳ್ಳಬಹುದು.
+        ಯಕ್ಷಧ್ವನಿ, ಧ್ವನಿಮುದ್ರಣ ಬಳಗ ಮತ್ತು ರೆಕಾರ್ಡಿಂಗ್ ಮೇಳ ಈ ಮೂರು ಟೆಲಿಗ್ರಾಂ ಗುಂಪುಗಳ ಮೂಲಕ ಹಂಚಿಕೆಯಾಗಿರುವ ಧ್ವನಿಮುದ್ರಣಗಳನ್ನು ಕ್ರೋಢೀಕರಿಸಿ, ಪಸರಿಸುವ ಉದ್ದೇಶದಿಂದ ಈ ತಂತ್ರಾಂಶವನ್ನು ಸಿದ್ಧಪಡಿಸಲಾಗಿದೆ</p>
+      </ion-card-content>
+      <ion-card-content ><ion-button href="/library">ಪ್ರವೇಶ</ion-button></ion-card-content>
+    </ion-card>
+    
+    
+
+    <ion-list lines="none" >
+      <ion-list-header>
+        <ion-label>ಟೆಲಿಗ್ರಾಂ ಗುಂಪುಗಳು</ion-label>
+      </ion-list-header>
+
+      <ion-item *ngFor="let p of groupDetails" [href]="p.url" target="_blank">
+        <ion-icon slot="start" color="medium" [name]="p.icon" ></ion-icon>
+        <ion-label>{{p.title}}</ion-label>
+      </ion-item>
+          
+    </ion-list>
+</ion-content>
+
+<!--
+      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+        <ion-icon slot="start" color="medium" name="build"></ion-icon>
+        <ion-label>Scaffold Out Your App</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/layout/structure">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Change Your App Layout</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/theming/basics">
+        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
+        <ion-label>Theme Your App</ion-label>
+      </ion-item> -->
+  

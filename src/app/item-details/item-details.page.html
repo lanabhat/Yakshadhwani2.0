@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/library"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ post?.title.rendered }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+      <ion-card>
+        <div *ngIf="post">
+          <img *ngIf="post.media_url" [src]="post.media_url" />
+        </div>
+        <ion-card-header>
+          <ion-card-title ion-class="strong">{{ post?.title.rendered }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div [innerHTML]="post?.content.rendered" class="ion-padding"></div>
+        </ion-card-content>
+      </ion-card>
+      <ion-footer>
+     <ion-toolbar>
+        <ion-button expand="full" (click)="openOriginal()">
+          ಯಕ್ಷಧ್ವನಿ ತಾಣದಲ್ಲಿ ವೀಕ್ಷಿಸಿ..
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
+   
+      </ion-content>
+
+<!--
+    
+     <ion-footer color="secondary">
+      <ion-toolbar>
+        <ion-button expand="full" fill="clear" (click)="openOriginal()">
+          ಯಕ್ಷಧ್ವನಿ ತಾಣದಲ್ಲಿ ವೀಕ್ಷಿಸಿ..
+        </ion-button>
+      </ion-toolbar>
+    </ion-footer>
+
+-->
+<!--
+
+
+  
+
+ <ion-content fullscreen>
+      <ion-card>
+      <div *ngIf="post">
+        <img *ngIf="post.media_url" [src]="post.media_url" />
+        </div>
+        <ion-card-header>
+          <ion-card-subtitle>Destination</ion-card-subtitle>
+          <ion-card-title>{{ post?.title.rendered }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div [innerHTML]="post.content.rendered" class="ion-padding"></div>
+        </ion-card-content>
+      <ion-card-content>
+        <ion-button expand="full" fill="clear" (click)="openOriginal()">
+      ಯಕ್ಷಧ್ವನಿ ತಾಣದಲ್ಲಿ ವೀಕ್ಷಿಸಿ..
+    </ion-button>
+      </ion-card-content>
+      </ion-card>
+
+    </ion-content>
+
+-->
+ 
+<!--
+
+  <div *ngIf="post">
+    <img *ngIf="post.media_url" [src]="post.media_url" [style.width]="'100%'">
+    <div [innerHTML]="post.content.rendered" class="ion-padding"></div>
+  </div>
+ 
+</ion-content>
+ 
+<ion-footer color="secondary">
+  <ion-toolbar>
+    <ion-button expand="full" fill="clear" (click)="openOriginal()">
+      ಯಕ್ಷಧ್ವನಿ ತಾಣದಲ್ಲಿ ವೀಕ್ಷಿಸಿ..
+    </ion-button>
+</ion-toolbar> 
+<ion-footer color="secondary">
+-->
+
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Provider</ion-card-subtitle>
+          <ion-card-title>Title</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Details of the audio
+        </ion-card-content>
+        <ion-card-content>
+        <ion-button>DownloadLinks</ion-button>
+        <ion-button>Back</ion-button>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
+
+-->

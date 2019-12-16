@@ -1,0 +1,38 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      ಬೇಟೆಯಾಡುತ್ತ...
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-searchbar cancelButtonIcon animated debounce="750" placeholder="ಕಾಮಿನಿ ಕರೆದುತಾರೆ..." (ionChange)="startSearch($event)" ></ion-searchbar>
+    <ion-chip color="success">
+    <ion-icon name="mic"></ion-icon>
+      <ion-label ><div class="ion-text-center" *ngIf="totalPostsCount">{{ totalPostsCount }} ಧ್ವನಿಗಳು ಲಭ್ಯವಿವೆ</div></ion-label>
+    </ion-chip>
+
+    
+      <ion-card *ngFor="let post of posts">
+        <ion-card-header>
+          <ion-card-title [innerHTML]="post.title.rendered"></ion-card-title>
+          <ion-card-subtitle>{{ post.date_gmt | date }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img *ngIf="post.media_url" [src]="post.media_url">
+          <div [innerHTML]="post.excerpt.rendered"></div>
+        <ion-button color="tertiary" [routerLink]="['/', 'itemdetails', post.id]" class="ion-text-right">ಸಂಪೂರ್ಣ ಮಾಹಿತಿ...</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-infinite-scroll threshold="300px" (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content [loadingText]="loadingText">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    
+
+  </ion-content>
