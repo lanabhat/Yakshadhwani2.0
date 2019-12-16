@@ -12,7 +12,7 @@ export class HomePage {
   public groupDetails = [
     {
       title: 'ತಾಳಮದ್ದಳೆ ಕೂಟ/ಧ್ವನಿಮುದ್ರಣ ಬಳಗ',
-      url: 'tel:+91 98456 67598',
+      url: 'tel:+91 000 000 0000',
       icon: 'book',
     },
     {
